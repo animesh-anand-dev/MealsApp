@@ -3,7 +3,7 @@ import React from 'react'
 import { Image, Platform, Pressable, StyleSheet, Text, View } from 'react-native'
 import MealDetails from '../MealDetails';
 
-const MealItem = ({id, title, imageUrl, duration, complexity, affordability }) => {
+const MealItem = ({id, title, imageUrl, duration, complexity, affordability, isVegetarian }) => {
 
     const navigation = useNavigation();
 
@@ -29,7 +29,7 @@ const MealItem = ({id, title, imageUrl, duration, complexity, affordability }) =
                     <Image source={{uri: imageUrl}} style={styles.image}/>
                     <Text style={styles.title}>{title}</Text>
                 </View>
-                <MealDetails duration={duration} complexity={complexity} affordability={affordability} />
+                <MealDetails duration={duration} complexity={complexity} affordability={affordability} isVegetarian={isVegetarian}/>
             </View>
         </Pressable>
     </View>

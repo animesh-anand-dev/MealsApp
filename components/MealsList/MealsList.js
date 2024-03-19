@@ -11,7 +11,8 @@ const MealsList = ({items}) => {
             imageUrl: item.imageUrl,
             affordability: item.affordability,
             complexity: item.complexity,
-            duration: item.duration
+            duration: item.duration,
+            isVegetarian: item.isVegetarian
         };
         return (
             <MealItem {...mealItemProps}/>

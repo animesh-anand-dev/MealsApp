@@ -2,16 +2,16 @@ import Category from '../models/category';
 import Meal from '../models/meal';
 
 export const CATEGORIES = [
-  new Category('c1', 'Italian', '#f5428d'),
-  new Category('c2', 'Quick & Easy', '#f54242'),
-  new Category('c3', 'Hamburgers', '#f5a442'),
-  new Category('c4', 'German', '#f5d142'),
-  new Category('c5', 'Light & Lovely', '#368dff'),
-  new Category('c6', 'Exotic', '#41d95d'),
-  new Category('c7', 'Breakfast', '#9eecff'),
-  new Category('c8', 'Asian', '#b9ffb0'),
-  new Category('c9', 'French', '#ffc7ff'),
-  new Category('c10', 'Summer', '#47fced')
+  new Category('c1', 'Italian', 'https://res.cloudinary.com/dgnmagiu2/image/upload/v1710825579/italian_ggc7by.png'),
+  new Category('c2', 'Quick & Easy', 'https://res.cloudinary.com/dgnmagiu2/image/upload/v1710825426/easy_jweze0.png'),
+  new Category('c3', 'Hamburgers', 'https://res.cloudinary.com/dgnmagiu2/image/upload/v1710825674/burger_nyzg8k.png'),
+  new Category('c4', 'German', 'https://res.cloudinary.com/dgnmagiu2/image/upload/v1710825721/german_dnityv.png'),
+  new Category('c5', 'Light & Lovely', 'https://res.cloudinary.com/dgnmagiu2/image/upload/v1710825825/light_nges9j.png'),
+  new Category('c6', 'Exotic', 'https://res.cloudinary.com/dgnmagiu2/image/upload/v1710825868/exotic_bxoxn4.png'),
+  new Category('c7', 'Breakfast', 'https://res.cloudinary.com/dgnmagiu2/image/upload/v1710825913/breakfast_lrtn7x.png'),
+  new Category('c8', 'Asian', 'https://res.cloudinary.com/dgnmagiu2/image/upload/v1710826094/asian_ut1z37.png'),
+  new Category('c9', 'French', 'https://res.cloudinary.com/dgnmagiu2/image/upload/v1710826145/french_kb5una.png'),
+  new Category('c10', 'Summer', 'https://res.cloudinary.com/dgnmagiu2/image/upload/v1710826203/summer_stmqsj.png')
 ];
 
 export const MEALS = [

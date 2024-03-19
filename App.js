@@ -9,6 +9,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import FavoritesScreen from './screens/FavoritesScreen';
 import { Ionicons } from '@expo/vector-icons';
 import FavoritesContextProvider from './store/context/favorites-context';
+import { Provider } from 'react-redux';
+import { store } from './store/redux/store';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -17,15 +19,15 @@ function DrawerNavigator() {
   return (
     <Drawer.Navigator
       screenOptions={{
-        headerStyle: { backgroundColor: '#351401' },
-        headerTintColor: 'white',
-        sceneContainerStyle: { backgroundColor: '#3f2f25' },
-        //drawerContentContainerStyle: { backgroundColor: '#351401'},
-        drawerContentStyle: {backgroundColor: '#351401'},
+        headerStyle: { backgroundColor: '#E6E6FA' },
+        headerTintColor: 'black',
+        //sceneContainerStyle: { backgroundColor: '#3f2f25' },
+        // drawerContentContainerStyle: { backgroundColor: '#351401'},
+        drawerContentStyle: {backgroundColor: 'white'},
         drawerItemStyle: {borderRadius: 40},
-        drawerInactiveTintColor: 'white',
-        drawerActiveTintColor: '#351401',
-        drawerActiveBackgroundColor: '#e4baa1',
+        drawerInactiveTintColor: 'black',
+        drawerActiveTintColor: 'black',
+        drawerActiveBackgroundColor: '#E6E6FA',
       }}
       initialRouteName='Categories'
     >
@@ -52,15 +54,16 @@ export default function App() {
 
   return (
     <>
-    <StatusBar style='light' />
-    <FavoritesContextProvider>
+    <StatusBar style='dark' />
+    {/* <FavoritesContextProvider> */}
+    <Provider store={store}>
     <NavigationContainer>
       <Stack.Navigator 
         screenOptions={{
-          headerShown: Platform.OS === 'android' ? true : false,
-          headerStyle: {backgroundColor: '#351401'},
-            headerTintColor: 'white',
-            contentStyle: { backgroundColor: '#3f2f25'}
+          // headerShown: Platform.OS === 'andrid' ? true : false,
+          headerStyle: {backgroundColor: '#E6E6FA'},
+            headerTintColor: 'black',
+            //contentStyle: { backgroundColor: '#3f2f25'}
         }}>
         <Stack.Screen 
           name='Drawer' 
@@ -92,10 +95,14 @@ export default function App() {
           <Stack.Screen
             name='MealDetail'
             component={MealDetailsSceen}
+            options={{
+              title: 'Meal Details'
+            }}
           />
       </Stack.Navigator>
     </NavigationContainer>
-    </FavoritesContextProvider>
+    </Provider>
+    {/* </FavoritesContextProvider> */}
     </>
   );
 }
